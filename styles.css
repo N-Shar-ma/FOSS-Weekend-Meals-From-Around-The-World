@@ -1,0 +1,131 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+}
+  
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: hsl(120, 100%, 85%);
+    overflow-x: hidden;
+    position: relative;
+}
+  
+.loading::after {
+    content: "Loading...";
+    text-align: center;
+    color: hsl(120, 100%, 95%);
+    font-size: 2rem;
+    position: fixed;
+    padding-top: 150px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    z-index: 1;
+}
+  
+h1 {
+    color: green;
+    text-align: center;
+}
+  
+input {
+    margin: 10px;
+    padding: 5px;
+    min-width: 25vw;
+    border-radius: 20px;
+    outline: none;
+}
+  
+.images-area {
+    display: grid;
+    width: 90vw;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fill, 200px);
+    grid-auto-rows: 200px;
+    grid-gap: 20px;
+    place-content: center center;
+    flex-grow: 1;
+}
+  
+.meal-image {
+    border: 3px dashed green;
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+  
+.overlay {
+    background-color: hsla(0, 0%, 0%, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    z-index: 5;
+    pointer-events: none;
+    transition: opacity 300ms ease-in-out;
+}
+  
+.show-modal .overlay {
+    opacity: 1;
+    pointer-events: all;
+}
+  
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%) scale(var(--scale, 0));
+    max-height: 70vh;
+    width: 500px;
+    max-width: 80vw;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 300ms ease-in-out;
+}
+  
+.show-modal .modal {
+    --scale: 1;
+}
+  
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: green;
+    color: hsl(120, 100%, 85%);
+    padding: 0 10px;
+}
+  
+.modal-title {
+    margin: 2px;
+}
+  
+.modal-close-button {
+    background-color: transparent;
+    color: hsl(120, 100%, 85%);
+    font-size: 2rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 0;
+}
+  
+.modal-content {
+    background-color: hsl(120, 100%, 95%);;
+    color: green;
+    padding: 10px;
+    overflow-y: auto;
+}
