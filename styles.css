@@ -130,16 +130,18 @@ input {
     overflow-y: auto;
 }
 #footer{
+    flex: 0 0 auto;
+    position: relative;
     font-size: small;
-    position: absolute;
     bottom: 0;
     text-align: center;
+    left: 0;
     height: 60px;
-    width: 100vw;
+    width: 100%;
     background-color: hsl(120, 46%, 54%);
 }
 #footer > p{
-    color: white;
+  color: white;
   margin: 0;
   position: absolute;
   top: 50%;
