@@ -2,9 +2,6 @@ let filteredRecipes;
 const BASE_URL = "https://www.themealdb.com/api/json/v1/1/";
 const input = document.querySelector("[data-input]");
 const body = document.querySelector("body");
-const backdrop = document.getElementById("backdrop");
-const errModal = document.getElementById("errorHandle");
-const errClose = document.getElementById("closeErrorHandle");
 
 input.addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
@@ -28,10 +25,11 @@ async function fetchRecipesByArea(area) {
     if (!response.ok) throw Error(response.status);
     ({ meals: filteredRecipes } = await response.json());
     if (filteredRecipes == null) {
-      body.classList.remove("loading");
-      backdrop.classList.add("backdrop");
-      errModal.classList.remove("fade");
-      document.getElementById("errMessage").textContent = `No ${area} meals found!`;
+      showModal(
+        "OOPS an Error Occured",
+        `No ${area} meals found!`,
+        "#FFC06E"
+      )
       throw Error(`No ${area} meals found!`);
     }
     console.log(filteredRecipes);
@@ -92,10 +90,5 @@ function showModal(title, content, color = "green") {
   document.querySelector(".modal-content").scrollTop = 0;
   document.querySelector(".modal-header").style.backgroundColor = color;
   body.classList.add("show-modal");
+  body.classList.remove("loading");
 }
-
-errClose.addEventListener("click", () => {
-  backdrop.classList.remove("backdrop");
-  errModal.classList.add("fade");
-  document.querySelector("input").value = "";
-});
