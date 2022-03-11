@@ -129,3 +129,34 @@ input {
     padding: 10px;
     overflow-y: auto;
 }
+
+/* FOOTER SECTION */
+
+.footer-padding {
+	padding-bottom: 60px;
+}
+
+.footer {
+	position: absolute;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	background-color: green;
+}
+
+.footer p {
+	margin-top: 25px;
+	font-size: 13px;
+    color: #fff;
+}
+
+.api-link{
+    color: hsl(120, 100%, 85%);
+    text-decoration: none;
+}
+
+.api-link:hover{
+    text-decoration: underline;
+    color: yellow;
+}
