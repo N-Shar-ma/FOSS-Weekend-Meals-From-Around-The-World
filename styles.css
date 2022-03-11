@@ -129,3 +129,22 @@ input {
     padding: 10px;
     overflow-y: auto;
 }
+a{
+    text-decoration: none;
+    color:rgb(7, 114, 13);
+    
+}
+footer
+{
+    font-size: 14px;
+    
+}
+.footer-container
+{
+    height: 45px;
+    background-color: azure;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
