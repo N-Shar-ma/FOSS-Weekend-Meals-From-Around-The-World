@@ -32,23 +32,6 @@ async function fetchRecipesByArea(area) {
   }
   catch (err) {
     console.log(err)
-    if (err.message == `No ${area} meals found!`){
-    showModal("\n"+err+"\n\n", `Sorry, '${area}' is not a valid entry. Try something else!`, color = "red");
-    // location.reload();
-    // body.classList.remove("loading")
-    }
-    else{
-    showModal("\n Unable to Fetch info\n\n", "\nYour internet connection doesn't seem well. Try again later!\n\n", color = "red");
-    // location.reload();
-    body.classList.remove("loading")
-    }
-    document.querySelector(".modal-close-button").addEventListener("click", ()=>{
-      location.reload()
-    });
-    
-    document.querySelector(".overlay").addEventListener("click", ()=>{
-      location.reload()
-    });
   }
 }
 
@@ -91,9 +74,6 @@ ${meal.strInstructions}`;
   }
   catch (err) {
     console.log(err)
-    showModal("\n"+err+"\n\n", `Your internet connection doesn't seem well. Try again later!`, color = "red");
-    // location.reload();
-    body.classList.remove("loading")
   }
 }
 
@@ -102,6 +82,5 @@ function showModal(title, content, color = "green") {
   document.querySelector(".modal-content").innerText = content;
 	document.querySelector(".modal-content").scrollTop = 0;
   document.querySelector(".modal-header").style.backgroundColor = color;
-  if( color == "red" ) {document.querySelector(".modal-content").style.backgroundColor = "white";}
   body.classList.add("show-modal");
 }
