@@ -41,15 +41,8 @@ async function fetchRecipesByArea(area) {
     showModal("\n Unable to Fetch info\n\n", "\nYour internet connection doesn't seem well. Try again later!\n\n", color = "red");
     // location.reload();
     body.classList.remove("loading")
-    }
-    document.querySelector(".modal-close-button").addEventListener("click", ()=>{
-      location.reload()
-    });
-    
-    document.querySelector(".overlay").addEventListener("click", ()=>{
-      location.reload()
-    });
   }
+}
 }
 
 function showImages() {
