@@ -13,7 +13,6 @@ body {
     background-color: hsl(120, 100%, 85%);
     overflow-x: hidden;
     position: relative;
-    background-color: green;
 }
   
 .loading::after {
@@ -29,8 +28,8 @@ body {
     right: 0;
     background-color: hsla(0, 0%, 0%, 0.5);
     z-index: 1;
-} 
-
+}
+  
 h1 {
     color: green;
     text-align: center;
@@ -129,59 +128,4 @@ input {
     color: green;
     padding: 10px;
     overflow-y: auto;
-}
-.filler{
-    padding-bottom: 70px;
-}
-.footers {
-    background-color: tan;
-    width: 100%;
-    display: flex;
-    flex: 0 0 auto;
-    justify-content: center;
-    position: relative;
-    bottom: 0;    
-    left: 0;
-    flex-direction: row;
-    align-items: center;
-    height: 80px;
-}
-
-.footer-text{
-    font-size: 30px;
-    margin: auto 5px;
-}
-.footer-link{
-
-    color: white;
-    text-decoration: none;
-    font-size: 30px;
-    bottom: 0;
-    margin: auto 5px;
-}
-
-.footer-image1{
-    transform: rotate(90deg);
-    margin-right: 10%;
-    display: none;
-    height: 300px;
-}
-.footer-image2{
-    transform: rotate(-90deg);
-    margin-left: 10%;
-    display: none;
-    height: 300px;
-}
-
-@media screen and (min-width: 1200px) {
-    .footer-image1 {
-        display: block;
-    }
-    .footer-image2{
-        display: block;
-    }
-}
-
-.background-adder{
-    background-color: green;
 }

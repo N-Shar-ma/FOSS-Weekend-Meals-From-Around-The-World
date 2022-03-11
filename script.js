@@ -28,7 +28,7 @@ async function fetchRecipesByArea(area) {
     if(filteredRecipes == null) throw Error(`No ${area} meals found!`);
     console.log(filteredRecipes);
     body.classList.remove("loading");
-    showImages(); 
+    showImages();
   }
   catch (err) {
     console.log(err)
@@ -47,7 +47,6 @@ Click to see recipe`;
     image.addEventListener("click", showIngredients);			
     imagesArea.append(image);
   });
-
 }
 
 async function showIngredients(e) {
