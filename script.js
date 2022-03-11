@@ -3,18 +3,19 @@ const BASE_URL = "https://www.themealdb.com/api/json/v1/1/";
 const input = document.querySelector("[data-input]");
 const body = document.querySelector("body");
 
-input.addEventListener("keyup", (e) => {
-  if (e.key === "Enter") {
+input.addEventListener("keyup", e => {
+  if(e.key === "Enter")
+  {
     input.blur();
     fetchRecipesByArea(input.value);
   }
-});
+})
 
-document.querySelector(".modal-close-button").addEventListener("click", () => {
+document.querySelector(".modal-close-button").addEventListener("click", ()=>{
   document.querySelector("body").classList.remove("show-modal");
 });
 
-document.querySelector(".overlay").addEventListener("click", () => {
+document.querySelector(".overlay").addEventListener("click", ()=>{
   document.querySelector("body").classList.remove("show-modal");
 });
 
@@ -42,14 +43,14 @@ async function fetchRecipesByArea(area) {
 
 function showImages() {
   const imagesArea = document.querySelector(".images-area");
-  filteredRecipes.forEach((meal) => {
+  filteredRecipes.forEach(meal => {
     const image = document.createElement("img");
     image.src = meal.strMealThumb;
     image.title = `${meal.strMeal}
 Click to see recipe`;
     image.classList.add("meal-image");
     image.id = meal.idMeal;
-    image.addEventListener("click", showIngredients);
+    image.addEventListener("click", showIngredients);			
     imagesArea.append(image);
   });
 }
@@ -80,16 +81,16 @@ Instructions:
 ${meal.strInstructions}`;
     body.classList.remove("loading");
     showModal(meal.strMeal, content);
-  } catch (err) {
-    console.log(err);
+  }
+  catch (err) {
+    console.log(err)
   }
 }
 
 function showModal(title, content, color = "green") {
   document.querySelector(".modal-title").innerText = title;
   document.querySelector(".modal-content").innerText = content;
-  document.querySelector(".modal-content").scrollTop = 0;
+        document.querySelector(".modal-content").scrollTop = 0;
   document.querySelector(".modal-header").style.backgroundColor = color;
   body.classList.add("show-modal");
-  body.classList.remove("loading");
 }
