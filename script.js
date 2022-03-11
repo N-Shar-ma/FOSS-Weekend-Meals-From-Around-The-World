@@ -33,9 +33,9 @@ async function fetchRecipesByArea(area) {
   catch (err) {
     body.classList.remove("loading");
     if (err.message == `No ${area} meals found!`){
-      showModal("Not Found", `No '${area}' meals found!\n\nTry searching for a different cuisine`);
+      showModal("Not Found", `No '${area}' meals found!\n\nTry searching for a different cuisine`, "red");
     } else {
-      showModal("Error", `Error: ${err.message}\n\nFailed to fetch details about ${area} meals.\n\nPlease check your Internet connection`);
+      showModal("Error", `Error: ${err.message}\n\nFailed to fetch details about ${area} meals.\n\nPlease check your Internet connection`, "red");
     }
   }
 }
@@ -80,7 +80,7 @@ ${meal.strInstructions}`;
   catch (err) {
     body.classList.remove("loading");
     console.log(e.target.id)
-    showModal("Error", `Error: ${err.message}\n\nFailed to fetch the ingredients\n\nPlease check your Internet connection`);
+    showModal("Error", `Error: ${err.message}\n\nFailed to fetch the ingredients\n\nPlease check your Internet connection`, "red");
   }
 }
 
