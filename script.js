@@ -35,13 +35,20 @@ async function fetchRecipesByArea(area) {
     if (err.message == `No ${area} meals found!`){
     showModal("\n"+err+"\n\n", `Sorry, '${area}' is not a valid entry. Try something else!`, color = "red");
     // location.reload();
-    body.classList.remove("loading")
+    // body.classList.remove("loading")
     }
     else{
     showModal("\n Unable to Fetch info\n\n", "\nYour internet connection doesn't seem well. Try again later!\n\n", color = "red");
     // location.reload();
     body.classList.remove("loading")
     }
+    document.querySelector(".modal-close-button").addEventListener("click", ()=>{
+      location.reload()
+    });
+    
+    document.querySelector(".overlay").addEventListener("click", ()=>{
+      location.reload()
+    });
   }
 }
 
