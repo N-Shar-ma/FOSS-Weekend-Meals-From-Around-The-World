@@ -23,21 +23,15 @@ async function fetchRecipesByArea(area) {
   try {
     body.classList.add("loading");
     const response = await fetch(`${BASE_URL}filter.php?a=${area}`);
-    if (!response.ok) throw Error(response.status);
-    ({ meals: filteredRecipes } = await response.json());
-    if (filteredRecipes == null) {
-      showModal(
-        "OOPS an Error Occured",
-        `No ${area} meals found!`,
-        "#FFC06E"
-      )
-      throw Error(`No ${area} meals found!`);
-    }
+    if(!response.ok) throw Error(response.status);
+    ({meals : filteredRecipes} = await response.json());
+    if(filteredRecipes == null) throw Error(`No ${area} meals found!`);
     console.log(filteredRecipes);
     body.classList.remove("loading");
     showImages();
-  } catch (err) {
-    console.log(err);
+  }
+  catch (err) {
+    console.log(err)
   }
 }
 
@@ -59,17 +53,16 @@ async function showIngredients(e) {
   try {
     body.classList.add("loading");
     const response = await fetch(`${BASE_URL}lookup.php?i=${e.target.id}`);
-    if (!response.ok) throw Error(response.status);
-    const {
-      meals: [meal],
-    } = await response.json();
+    if(!response.ok) throw Error(response.status);
+    const {meals : [meal]} = await response.json();
     console.log(meal);
     const ingredients = [];
-    for (let i = 1; i <= 20; i++) {
+    for(let i = 1; i <= 20; i++)
+    {
       if(meal[`strIngredient${i}`] != "")
-      ingredients.push(
-        meal[`strMeasure${i}`] + " " + meal[`strIngredient${i}`]
-      );
+      {
+      ingredients.push(meal[`strMeasure${i}`] + " " + meal[`strIngredient${i}`]);
+      }
     }
     const content = `Ingredients:
 

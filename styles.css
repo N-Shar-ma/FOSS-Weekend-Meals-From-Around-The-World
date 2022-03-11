@@ -129,20 +129,3 @@ input {
     padding: 10px;
     overflow-y: auto;
 }
-
-#copyright{
-    background-color: rgba(0, 0, 0, 0.05); 
-    width: 100vw;
-    margin: auto;
-    height: 20px;
-    padding: 1em 0 1em 0;
-}
-#copyright__api{    
-    width: 200px;
-    margin: auto;
-} 
-#copyright__api a,
-#copyright__api a:active,
-#copyright__api a:visited{
-        color: rgb(131, 170, 250);
-} 
