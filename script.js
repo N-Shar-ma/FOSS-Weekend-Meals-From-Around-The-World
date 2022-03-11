@@ -65,6 +65,7 @@ async function showIngredients(e) {
     console.log(meal);
     const ingredients = [];
     for (let i = 1; i <= 20; i++) {
+      if(meal[`strIngredient${i}`] != "")
       ingredients.push(
         meal[`strMeasure${i}`] + " " + meal[`strIngredient${i}`]
       );
