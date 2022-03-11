@@ -129,3 +129,35 @@ input {
     padding: 10px;
     overflow-y: auto;
 }
+#footer{
+    font-size: small;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    height: 60px;
+    width: 100vw;
+    background-color: hsl(120, 46%, 54%);
+}
+#footer > p{
+    color: white;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 10px);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+#footer > p > a{
+    text-decoration: none;
+}
+#footer > p > img{
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    left: -58px;
+    top: -10px;
+    object-fit: cover;
+}
+#footer > p:hover{
+    cursor: default;
+}
