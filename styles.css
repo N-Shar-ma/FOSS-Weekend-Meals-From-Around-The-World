@@ -129,3 +129,16 @@ input {
     padding: 10px;
     overflow-y: auto;
 }
+
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: rgba(237, 241, 244, 0.782);
+    background-color: rgba(0, 0, 0, 0.666);
+}
+
+footer a{
+    text-decoration: none;
+    color: rgba(55, 233, 135, 0.748);
+}
