@@ -129,3 +129,10 @@ input {
     padding: 10px;
     overflow-y: auto;
 }
+
+.footer{
+    width: 100vw;
+    height: 5vh;
+    background-color: rgb(131, 238, 10);
+    text-align: center;
+}
