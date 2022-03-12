@@ -129,7 +129,7 @@ input {
     padding: 10px;
     overflow-y: auto;
 }
-a{
+.footer-link{
     text-decoration: none;
     color:rgb(7, 114, 13);
     
