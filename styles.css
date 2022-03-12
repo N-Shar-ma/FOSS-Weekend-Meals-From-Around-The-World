@@ -133,6 +133,7 @@ input {
 .footer{
     width: 100vw;
     height: 5vh;
-    background-color: rgb(131, 238, 10);
+    background-color: rgb(3, 172, 3);
     text-align: center;
+    color: azure;
 }
