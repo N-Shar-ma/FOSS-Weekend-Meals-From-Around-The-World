@@ -129,3 +129,17 @@ input {
     padding: 10px;
     overflow-y: auto;
 }
+
+footer {
+    background-color: hsl(120, 84%, 70%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    color: rgb(48, 48, 47);
+}
+
+footer a {
+    color: rgb(7, 78, 7);
+}
