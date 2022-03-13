@@ -129,3 +129,12 @@ input {
     padding: 10px;
     overflow-y: auto;
 }
+
+footer{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: darkgreen;
+    color: white;
+}
