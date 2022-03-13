@@ -139,3 +139,8 @@ footer{
     background-color: rgba(0, 187, 0, 0.438);
     color: white;
 }
+
+footer > a > img{
+    width: 9em;
+    margin-left: 20px;
+}
