@@ -129,3 +129,21 @@ input {
     padding: 10px;
     overflow-y: auto;
 }
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: rgba(237, 241, 244, 0.782);
+    background-color: #9c4444;
+    flex: 0 0 auto;
+    position: relative;
+    align-items: center;
+    height: 100px;
+    }
+
+
+footer a{
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: saddlebrown;
+    color: rgba(55, 233, 135, 0.748);
+}
