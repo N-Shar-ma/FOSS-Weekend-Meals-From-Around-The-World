@@ -129,3 +129,31 @@ input {
     padding: 10px;
     overflow-y: auto;
 }
+
+/*    FOOTER   */
+
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #b32a4c;
+    text-align: center;
+  }
+  footer .content p{
+    max-width: 1200px;
+    margin: auto;
+    /* padding: 15px; */
+    color: #222222;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+
+  }
+  footer .content a{
+    text-decoration: none !important;
+    color: #d7e6f0;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+ 
