@@ -134,16 +134,17 @@ input {
 
 footer{
     width: 100%;
-    position: fixed;
+    flex: 0 0 auto;
+    position: relative;
+    height:50px;
     bottom: 0;
     left: 0;
-    background: #b32a4c;
+    background: #17cc78;
     text-align: center;
   }
   footer .content p{
-    max-width: 1200px;
+    max-width: 1000px;
     margin: auto;
-    /* padding: 15px; */
     color: #222222;
     font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
