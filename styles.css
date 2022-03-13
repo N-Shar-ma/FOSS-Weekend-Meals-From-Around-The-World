@@ -130,12 +130,14 @@ input {
     overflow-y: auto;
 }
 footer{
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    z-index: 1;
+    display: inline;
+    position: relative;
+    bottom: auto;
+    right: auto;
     background: #111;
-    height: auto;
-    width: 100vw;
+    height: 7%;
+    width: 100%;
     padding-top:15px;
     color: #fff;
 }
