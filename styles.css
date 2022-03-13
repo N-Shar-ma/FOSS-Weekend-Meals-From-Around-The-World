@@ -137,10 +137,15 @@ footer{
     align-items: center;
     text-align: center;
     background-color: rgba(0, 187, 0, 0.438);
-    color: white;
+    color: #f0a94e;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.5px;
+    font-weight: 1000;
+    font-size: 1.0em;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.644);
 }
 
 footer > a > img{
-    width: 9em;
+    width: 8.5em;
     margin-left: 20px;
 }
