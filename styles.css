@@ -131,10 +131,11 @@ input {
 }
 
 footer{
+    display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: darkgreen;
+    background-color: rgba(0, 187, 0, 0.438);
     color: white;
 }
