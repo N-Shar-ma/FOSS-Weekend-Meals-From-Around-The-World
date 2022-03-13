@@ -129,3 +129,13 @@ input {
     padding: 10px;
     overflow-y: auto;
 }
+
+footer {
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+footer a {
+    color: green;
+}
