@@ -134,8 +134,10 @@ input {
 {
     background-color: rgb(3, 138, 3);
     width:100%;
-    
     text-align: center;
     color:rgb(246, 241, 241);
-    
+    height: 12%;
+    font-size: 120%;
+    margin-block: 0%;
 }
+
