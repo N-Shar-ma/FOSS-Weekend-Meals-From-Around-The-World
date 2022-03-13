@@ -129,3 +129,21 @@ input {
     padding: 10px;
     overflow-y: auto;
 }
+footer{
+    z-index: 1;
+    display: inline;
+    position: relative;
+    bottom: auto;
+    right: auto;
+    background: #111;
+    height: 7%;
+    width: 100%;
+    padding-top:15px;
+    color: #fff;
+}
+.foot{
+    text-align: center;
+    font-size: larger;
+    padding-bottom: 20px;
+}
+
